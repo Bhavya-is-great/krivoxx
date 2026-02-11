@@ -57,3 +57,8 @@ html::selection {
     font-size: 12px;
   }
 }
+
+.transition {
+  position: absolute;
+  height: 100vh;
+}

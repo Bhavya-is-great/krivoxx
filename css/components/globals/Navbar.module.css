@@ -54,7 +54,7 @@
     overflow: hidden;
 }
 
-.nav .pages .page a {
+.nav .pages .page .a {
     text-decoration: none;
     color: var(--dark-color);
     display: flex;
@@ -67,15 +67,16 @@
     transition: all 0.3s ease;
 }
 
-.nav .pages .page a span:nth-child(1) {
+.nav .pages .page .a span:nth-child(1) {
     position: relative;
 }
 
-.nav .pages .page:hover a span:nth-child(1) {
+.nav .pages .page:hover .a span:nth-child(1) {
     top: -40px;
+    color: var(--secondary-color);
 }
 
-.nav .pages .page a span:nth-child(2) {
+.nav .pages .page .a span:nth-child(2) {
     text-decoration: none;
     position: absolute;
     left: 50%;
@@ -83,12 +84,13 @@
     transform: translateX(-50%);
 }
 
-.nav .pages .page:hover a span:nth-child(2) {
+.nav .pages .page:hover .a span:nth-child(2) {
     text-decoration: none;
     position: absolute;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 50%);
+    color: var(--secondary-color);
 }
 
 .nav .pages .page.active {

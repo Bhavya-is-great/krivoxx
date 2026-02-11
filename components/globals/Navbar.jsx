@@ -4,6 +4,7 @@ import styles from '@/css/components/globals/Navbar.module.css';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import { usePathname } from 'next/navigation';
+import Transmit from '@/helpers/Transmit';
 
 const Navbar = () => {
 
@@ -45,10 +46,10 @@ const Navbar = () => {
                         Pages.map((route, i) => {
                             return (
                                 <li className={`${styles.page} ${route.page == currentPage ? styles.active : ""}`} key={i}>
-                                    <a href="#">
+                                    <Transmit href={route.page} className={styles.a}>
                                         <span> {route.name} </span>
                                         <span> {route.name} </span>
-                                    </a>
+                                    </Transmit>
                                 </li>
                             )
                         })
@@ -57,7 +58,7 @@ const Navbar = () => {
                 <button className={styles.getStarted}>Get Started</button>
             </div>
 
-            <div className={`${styles.hamburger} ${open ? styles.open : ""}`} onClick={() => {setOpen(!open)}}>
+            <div className={`${styles.hamburger} ${open ? styles.open : ""}`} onClick={() => { setOpen(!open) }}>
                 <span className={styles.line}></span>
                 <span className={styles.line}></span>
                 <span className={styles.line}></span>
