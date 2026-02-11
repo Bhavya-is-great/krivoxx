@@ -50,7 +50,7 @@ const Hero = () => {
                 <span>We</span> <span>Don't</span> <span>Chase</span> <span className={styles.color}>Trend</span><span>.</span>
             </div>
             <div className={styles.middle}>
-                <span>We</span> <span>Create</span> <span className={styles.color}>Our</span> <span>Chase</span><span>.</span>
+                <span>We</span> <span>Create</span> <span className={styles.color}>Our</span> <span>Own</span><span>.</span>
             </div>
             <button className={styles.cta} onMouseEnter={animateEnter} onMouseLeave={animateLeave}>
                 Strat Dominating
