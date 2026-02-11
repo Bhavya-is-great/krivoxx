@@ -7,9 +7,14 @@ export default function Transmit({ href, children, ...props }) {
     const { setActive, waitForRoute, waitForModel } = useTransition();
     const path = usePathname();
 
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     const handleClick = async () => {
         if (path == href) return;
         setActive(true);
+        await sleep(600);
         router.push(href);
 
         await Promise.all([

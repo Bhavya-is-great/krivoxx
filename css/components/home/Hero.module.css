@@ -1,0 +1,133 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle 400px at center, #9d6dfd4b 1%, var(--secondary-color) 100%);
+    height: 85vh;
+    flex-direction: column;
+    position: relative;
+    min-height: 400px;
+}
+
+.hero .small {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.hero .middle {
+    font-size: 6rem;
+    width: 60%;
+    text-align: center;
+    font-weight: 600;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.hero .middle span {
+    display: inline-block;
+}
+
+.hero .middle .color {
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+.hero .cta {
+    position: relative;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.75rem 1.25rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* .hero .cta:hover {
+    transform: translateY(-10%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+} */
+
+.hero .handShake {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.gradient {
+    height: 10%;
+    background: linear-gradient(transparent, white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero .middle {
+        width: 100%;
+        font-size: 6rem;
+    }
+
+    .hero .handShake {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero .middle {
+        width: 100%;
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        background: radial-gradient(circle 300px at center, #9d6dfd4b 1%, var(--secondary-color) 100%);
+    }
+
+    .hero .middle {
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .hero .cta {
+        font-size: 1.5rem;
+    }
+
+    .hero .handShake {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .hero .middle {
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    .hero {
+        height: 70vh;
+        background: radial-gradient(circle 250px at center, #9d6dfd4b 1%, var(--secondary-color) 100%);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .hero .middle {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .hero .cta {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        height: 60vh;
+        background: radial-gradient(circle 200px at center, #9d6dfd4b 1%, var(--secondary-color) 100%);
+    }
+}
