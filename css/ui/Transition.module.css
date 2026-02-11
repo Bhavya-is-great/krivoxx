@@ -1,0 +1,41 @@
+.transitionDiv {
+    background: var(--primary-color);
+    inset: 0;
+    position: fixed;
+    z-index: 9999;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+
+.row {
+    display: flex;
+    height: 50%;
+}
+
+.transitionDiv .divTopLeft {
+    height: 100%;
+    width: 50%;
+    background: var(--primary-color);
+}
+
+.transitionDiv .divBottomLeft {
+    height: 100%;
+    width: 50%;
+    /* background: var(--dark-color); */
+    background: var(--secondary-color);
+}
+
+.transitionDiv .divTopRight {
+    height: 100%;
+    width: 50%;
+    /* background: var(--dark-color); */
+    background: var(--secondary-color);
+}
+
+.transitionDiv .divBottomRight {
+    height: 100%;
+    width: 50%;
+    background: var(--primary-color);
+}

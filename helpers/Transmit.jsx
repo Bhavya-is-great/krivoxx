@@ -1,12 +1,14 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "@/context/TransitionContext";
 
 export default function Transmit({ href, children, ...props }) {
     const router = useRouter();
     const { setActive, waitForRoute, waitForModel } = useTransition();
+    const path = usePathname();
 
     const handleClick = async () => {
+        if (path == href) return;
         setActive(true);
         router.push(href);
 

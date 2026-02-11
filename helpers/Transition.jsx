@@ -1,8 +1,8 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useTransition } from "@/context/TransitionContext";
+import styles from '@/css/ui/Transition.module.css';
 
 export default function Transition() {
     const { active } = useTransition();
@@ -26,15 +26,15 @@ export default function Transition() {
     }, [active]);
 
     return (
-        <div
-            ref={ref}
-            style={{
-                position: "fixed",
-                inset: 0,
-                background: "#000",
-                transform: "translateY(100%)",
-                zIndex: 9999,
-            }}
-        />
+        <div ref={ref} className={styles.transitionDiv}>
+            <div className={styles.row}>
+                <div className={styles.divTopLeft}></div>
+                <div className={styles.divTopRight}></div>
+            </div>
+            <div className={styles.row}>
+                <div className={styles.divBottomLeft}></div>
+                <div className={styles.divBottomRight}></div>
+            </div>
+        </div>
     );
 }
