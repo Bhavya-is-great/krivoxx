@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,29 +21,20 @@ export default function useSmoothScroll() {
 
         requestAnimationFrame(raf);
 
-        // Tell ScrollTrigger to use Lenis scroll values
+        // Critical link between Lenis & ScrollTrigger
         lenis.on("scroll", ScrollTrigger.update);
 
-        ScrollTrigger.scrollerProxy(document.body, {
-            scrollTop(value) {
-                return arguments.length
-                    ? lenis.scrollTo(value)
-                    : lenis.scroll.instance.scroll;
-            },
-            getBoundingClientRect() {
-                return {
-                    top: 0,
-                    left: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                };
-            },
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
         });
+
+        gsap.ticker.lagSmoothing(0);
 
         ScrollTrigger.refresh();
 
         return () => {
             lenis.destroy();
+            gsap.ticker.remove(lenis.raf);
         };
     }, []);
 }

@@ -1,0 +1,35 @@
+.story {
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    padding: 5rem clamp(1.5rem, 4vw, 6rem);
+    padding-top: 2rem;
+}
+
+.inner {
+    max-width: 75rem;
+    width: 100%;
+}
+
+.line {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--dark-color);
+    margin: clamp(1.6rem, 2.6vw, 2.6rem) 0;
+}
+
+.highlightWord {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.head {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 7rem);
+    padding-top: 3rem;
+}
+
+.color {
+    color: var(--primary-color);
+}
