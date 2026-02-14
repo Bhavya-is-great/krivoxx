@@ -65,7 +65,7 @@ const Services = () => {
 
   return (
     <section id='services' className={styles.service}>
-      <h1 className={styles.head}>How we Serve Your Brand</h1>
+      <h1 className={styles.head}>How we Serve Your <span className={styles.color}>Brand</span></h1>
       <p className={styles.subhead}>Stop Competing. Start Dominating.</p>
 
       <div className={styles.cards}>
