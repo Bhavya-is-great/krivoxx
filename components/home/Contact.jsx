@@ -1,8 +1,7 @@
-// Logina26e94001@smtp-brevo.com
-// Passwordt9haws30xdOYqTg8
 "use client";
 import React, { useState } from "react";
 import styles from "@/css/components/home/Contact.module.css";
+import axios from "axios";
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -51,7 +50,7 @@ const Contact = () => {
         return newErrors;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const validationErrors = validate();
@@ -62,7 +61,33 @@ const Contact = () => {
         }
 
         setErrors({});
-        console.log({ name, email, phone, coName, contact, subject, message });
+
+        try {
+            const res = await axios.post("/api/contact", {
+                name,
+                email,
+                phone,
+                coName,
+                contact,
+                subject,
+                message,
+            });
+
+            alert(res.data.message);
+
+            setName("");
+            setCoName("");
+            setEmail("");
+            setContact("");
+            setPhone("");
+            setMessage("");
+            setSubject("");
+
+        } catch (err) {
+            alert(
+                err?.response?.data?.message || "Something went wrong"
+            );
+        }
     };
 
     return (
