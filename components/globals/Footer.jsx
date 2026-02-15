@@ -63,6 +63,11 @@ const Footer = () => {
                     Crafting digital presence with precision.
                 </p>
 
+                <div className={styles.contactLinks}>
+                    <a href="tel:+919998813569">+91 99988 13569</a>
+                    <a href="mailto:krivox9@gmail.com">krivox9@gmail.com</a>
+                </div>
+
                 <span className={styles.rights}>
                     © {new Date().getFullYear()} KRIVOXX
                 </span>

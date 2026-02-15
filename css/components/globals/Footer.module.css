@@ -39,7 +39,7 @@
     display: flex;
     justify-content: center;
     gap: 2.2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.6rem;
 }
 
 .links button {
@@ -60,6 +60,27 @@
 .copy {
     font-size: 1rem;
     opacity: 0.5;
+    margin-bottom: 1.2rem;
+}
+
+.contactLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+.contactLinks a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.6;
+    transition: 0.25s ease;
+}
+
+.contactLinks a:hover {
+    opacity: 1;
+    color: var(--primary-color);
 }
 
 .rights {
@@ -67,16 +88,37 @@
     opacity: 0.35;
 }
 
+/* Tablet */
+
+@media (max-width: 992px) {
+    .massiveLogo {
+        font-size: 4.5rem;
+    }
+}
+
 /* Mobile */
 
 @media (max-width: 600px) {
+    .svg {
+        height: 160px;
+    }
+
+    .content {
+        padding: 4rem 1rem 2rem;
+    }
+
     .massiveLogo {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         letter-spacing: 0.2rem;
     }
 
     .links {
         flex-direction: column;
-        gap: 0.7rem;
+        gap: 0.6rem;
+    }
+
+    .contactLinks {
+        flex-direction: column;
+        gap: 0.3rem;
     }
 }
