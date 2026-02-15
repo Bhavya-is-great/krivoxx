@@ -1,3 +1,4 @@
+import Footer from '@/components/globals/Footer'
 import Navbar from '@/components/globals/Navbar'
 import AboutStory from '@/components/home/About'
 import Contact from '@/components/home/Contact'
@@ -15,6 +16,7 @@ const page = () => {
       <Industries />
       <AboutStory />
       <Contact />
+      <Footer />
     </div>
   )
 }
