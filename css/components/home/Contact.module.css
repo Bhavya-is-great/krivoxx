@@ -1,0 +1,162 @@
+.contact {
+    padding-bottom: 0.5rem;
+}
+
+.head {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 7rem);
+}
+
+.color {
+    color: var(--primary-color);
+}
+
+.subhead {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 4.5rem);
+    font-weight: 500;
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    gap: 2rem;
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 0.25rem;
+}
+
+.inputBox label {
+    font-size: 1.2rem;
+}
+
+.inputBox input {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #eee;
+    background: #eee;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.inputBox input::placeholder {
+    font-size: 1.2rem;
+}
+
+.inputBox input:hover {
+    border: 2px solid var(--primary-color);
+}
+
+.inputBox input:focus {
+    outline: none;
+    border: 2px solid #512c9c;
+}
+
+.inputCont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.inputCont {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.inputCont textarea {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    padding-block: 0.5rem;
+    font-family: inherit;
+    border-radius: 0.5rem;
+    border: 2px solid #eee;
+    background: #eee;
+    outline: none;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.inputCont textarea::placeholder {
+    font-size: 1.2rem;
+}
+
+.inputCont textarea:hover {
+    border: 2px solid var(--primary-color);
+}
+
+.inputCont textarea:focus {
+    outline: none;
+    border: 2px solid #512c9c;
+}
+
+.inputCont label {
+    font-size: 1.2rem;
+}
+
+.submit {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background: #663bbd;
+}
+
+.errorText {
+    font-size: 1.1rem;
+    color: #ff4d4f;
+    margin-top: 0.35rem;
+    height: 1.5rem;
+    line-height: 1.2rem;
+    transition: opacity 0.2s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .contactForm {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactForm {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inputRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputBox {
+        width: 100%;
+    }
+}

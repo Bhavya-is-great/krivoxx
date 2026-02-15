@@ -20,8 +20,7 @@ export default function useSmoothScroll() {
         }
 
         requestAnimationFrame(raf);
-
-        // Critical link between Lenis & ScrollTrigger
+        
         lenis.on("scroll", ScrollTrigger.update);
 
         gsap.ticker.add((time) => {
