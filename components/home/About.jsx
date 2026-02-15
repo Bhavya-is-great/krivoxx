@@ -57,7 +57,7 @@ export default function AboutStory() {
 
     return (
         <>
-            <h1 className={styles.head}>A Story that Created <span className={styles.color}>KRIVOXX</span></h1>
+            <h1 id="about" className={styles.head}>A Story that Created <span className={styles.color}>KRIVOXX</span></h1>
             <section ref={container} className={styles.story}>
                 <div className={styles.inner}>
                     {[

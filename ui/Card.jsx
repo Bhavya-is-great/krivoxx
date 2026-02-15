@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "@/css/ui/Card.module.css";
 
@@ -10,6 +11,18 @@ const Cards = ({
   moreText,
   buttonText = "Explore Services",
 }) => {
+
+
+  const scrollToSection = () => {
+    const el = document.querySelector("#contact");
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.top}>
@@ -34,7 +47,7 @@ const Cards = ({
         {moreText && <li className={styles.more}>{moreText}</li>}
       </ul>
 
-      <button className={styles.button}>
+      <button className={styles.button} onClick={scrollToSection}>
         {buttonText}
         <span className={styles.arrow}>→</span>
       </button>

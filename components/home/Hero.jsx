@@ -28,6 +28,16 @@ const Hero = () => {
         });
     });
 
+    const scrollToSection = () => {
+        const el = document.querySelector("#contact");
+        if (!el) return;
+
+        el.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
     const animateEnter = contextSafe(() => {
         gsap.to(`.${styles.cta}`, {
             y: -5,
@@ -52,7 +62,7 @@ const Hero = () => {
             <div className={styles.middle}>
                 <span>We</span> <span>Create</span> <span className={styles.color}>Our</span> <span>Own</span><span>.</span>
             </div>
-            <button className={styles.cta} onMouseEnter={animateEnter} onMouseLeave={animateLeave}>
+            <button onClick={scrollToSection} className={styles.cta} onMouseEnter={animateEnter} onMouseLeave={animateLeave}>
                 Strat Dominating
             </button>
             <Image src={handShake} alt='HnadShake' className={styles.handShake}></Image>
